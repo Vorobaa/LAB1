@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contacts</title>
+
+    <meta name="description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
+    <meta property="og:title" content="ToDoList">
+    <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
+    <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
+</head>
+<body>
+    <header>
+       <h1>Контакти</h1>
+        <nav>
+            <a href="index.html" style="font-size: 24px;">Головна</a> |
+            <a href="catalog.html" style="font-size: 24px;">Каталог</a>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Мої контакти</h2>
+            <p>Email: vorobaaa72@gmail.com</p>
+            <p>Телефон: 0664667512</p>
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Особиста інформація</legend>
+
+                    <label for="name">Ім'я:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+
+                    <label for="phone">Телефон:</label><br>
+                    <input type="tel" id="phone" name="phone" required pattern="^\+380\d{9}$"><br><br>
+
+                    <label for="password">Пароль:</label><br>
+                    <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Налаштування завдання</legend>
+
+                    <p>Пріоритет завдання:</p>
+                    <input type="radio" id="high" name="priority" value="high" required>
+                    <label for="high">Високий</label><br>
+
+                    <input type="radio" id="medium" name="priority" value="medium">
+                    <label for="medium">Середній</label><br>
+
+                    <input type="radio" id="low" name="priority" value="low">
+                    <label for="low">Низький</label><br><br>
+
+                    <p>Теги:</p>
+                    <input type="checkbox" id="work" name="tags" value="work">
+                    <label for="work">Робота</label><br>
+
+                    <input type="checkbox" id="home" name="tags" value="home">
+                    <label for="home">Домашнє</label><br>
+
+                    <input type="checkbox" id="urgent" name="tags" value="urgent">
+                    <label for="urgent">Термінове</label><br><br>
+
+                    <label for="category">Категорія завдання:</label><br>
+                    <select id="category" name="category" required>
+                        <option value="" selected hidden>Оберіть категорію</option>
+                        <optgroup label="Особисте">
+                             <option>Здоров'я</option>
+                            <option>Хобі</option>
+                        </optgroup>
+                        <optgroup label="Робота">
+                            <option>Офісні завдання</option>
+                            <option>Проекти</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <br>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+      <p>2026 ToDoList</p>
+    </footer>
+</body>
+</html>
