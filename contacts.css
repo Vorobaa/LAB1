@@ -15,7 +15,6 @@ body {
 }
 
 p {
-    font-size: 1rem;
     line-height: 0.5;
 }
 
@@ -70,14 +69,28 @@ button:hover {
     width: 200px;
 }
 
-a {
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 0.625rem;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
     border: none;
     cursor: pointer;
+    font-size: 1.3rem;
+    width: 9.375rem;
     padding: 0.625rem 1.25rem;
-    border-radius: 30px;
     color: var(--bg-color);
+    border-radius: 1.875rem;
     background-color: var(--bg-color2);
-    text-decoration: none;
     transition: background-color 2s;
 }
 
