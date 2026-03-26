@@ -10,6 +10,11 @@
     <meta property="og:title" content="ToDoList">
     <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
     <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
+    <link rel="stylesheet" href="contacts.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -18,28 +23,25 @@
             <a href="index.html" style="font-size: 24px;">Головна</a> |
             <a href="catalog.html" style="font-size: 24px;">Каталог</a>
         </nav>
+        <h2>Форма зворотного зв'язку</h2>
     </header>
     <main>
         <div>
-            <h2>Мої контакти</h2>
-            <p>Email: vorobaaa72@gmail.com</p>
-            <p>Телефон: 0664667512</p>
-            <h2>Форма зворотного зв'язку</h2>
             <form action="#" method="post">
                 <fieldset>
                     <legend>Особиста інформація</legend>
 
                     <label for="name">Ім'я:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
+                    <input type="text" id="name" name="name" placeholder="Введіть ваше ім'я" required><br><br>
 
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
+                    <input type="email" id="email" name="email" placeholder="Введіть вашу пошту" required><br><br>
 
                     <label for="phone">Телефон:</label><br>
-                    <input type="tel" id="phone" name="phone" required pattern="^\+380\d{9}$"><br><br>
+                    <input type="tel" id="phone" name="phone" placeholder="Введіть ваш телефон" required pattern="^\+380\d{9}$"><br><br>
 
                     <label for="password">Пароль:</label><br>
-                    <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <input type="password" id="password" name="password" placeholder="Введіть ваш пароль" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                 </fieldset>
                 <br>
                 <fieldset>
@@ -84,7 +86,10 @@
         </div>
     </main>
     <footer>
-      <p>2026 ToDoList</p>
+        <h2>Мої контакти</h2>
+        <p>Email: vorobaaa72@gmail.com</p>
+        <p>Телефон: 0664667512</p>
+        <p>2026 ToDoList</p>
     </footer>
 </body>
 </html>

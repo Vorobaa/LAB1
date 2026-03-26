@@ -10,32 +10,39 @@
     <meta property="og:title" content="ToDoList">
     <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
     <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>Головна</h1>
-        <picture>
-            <source media="(min-width: 400px)" srcset="images/todolist.jpg">
-            <source media="(min-width: 250px)" srcset="images/todolist_small.jpg">
-            <img src="images/todolist.jpg" alt="ToDoList" align="right" width="400">
-        </picture>
         <nav>
-            <a href="catalog.html" style="font-size: 24px;">Каталог</a> |
-            <a href="contacts.html" style="font-size: 24px;">Контакти</a>
+            <ul class="menu">
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
         </nav>
     </header>
     <main>
-        <div>
-            <h2>Ласкаво просимо!</h2>
-            <p>Це простий сайт для керування списком завдань.</p>
+        <div class="row">
+            <div class="card">
+                <h2>Ласкаво просимо!</h2>
+                <p>Це простий сайт для керування списком завдань.</p>
+            </div>
+            <picture class="img1">
+                <source media="(min-width: 400px)" srcset="images/todolist.jpg">
+                <source media="(min-width: 250px)" srcset="images/todolist_small.jpg">
+                <img src="images/todolist.jpg" alt="ToDoList">
+            </picture>
         </div>
+        <video class="video-block" controls>
+            <source src="videos/" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </main>
-    <video width="320" height="240" controls>
-        <source src="videos/" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <footer>
-        <p>2026 ToDoList</p>
-    </footer>
+    <footer>2026 ToDoList</footer>
 </body>
 </html>

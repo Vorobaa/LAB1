@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #00008B;
+    --bg-color1: #D3D3D3;
+    --bg-color2: #0000CD;
+    --text-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+header, footer {
+    text-align: center;
+}
+
+a {
+    border: none;
+    cursor: pointer;
+    padding: 0.625rem 1.25rem;
+    border-radius: 30px;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    text-decoration: none;
+    transition: background-color 2s;
+}
+
+a:hover{
+    background-color: var(--bg-color2);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    border: 0.0625rem solid #ddd;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+table thead {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #D3D3D3;
+}
+
+table tfoot {
+    background-color: var(--bg-color);
+    font-weight: bold;
+    color: var(--text-color);
+}
+

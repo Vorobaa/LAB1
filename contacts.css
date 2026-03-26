@@ -1,0 +1,87 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #FFFFFF;
+    --bg-color1: #D3D3D3;
+    --bg-color2: #00008B;
+    --bg-color3: #0000CD;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 0.5;
+}
+
+header, footer {
+    text-align: center;
+}
+
+input, select {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    background-color: var(--bg-color);
+    transition: 0.5s ease-out;
+}
+
+input:focus, select:focus {
+    border:  0.125rem solid var(--bg-color2);
+    background-color: var(--bg-color1);
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input:invalid {
+    border-color: #FF0000;
+}
+
+input:valid {
+    border-color: #008000;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+    transform: scale(1.3);
+}
+
+button {
+    background-color: var(--bg-color2);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 30px;
+    width: 150px;
+    transition: width 2s;
+}
+
+button:hover {
+    background-color: var(--bg-color3);
+    width: 200px;
+}
+
+a {
+    border: none;
+    cursor: pointer;
+    padding: 0.625rem 1.25rem;
+    border-radius: 30px;
+    color: var(--bg-color);
+    background-color: var(--bg-color2);
+    text-decoration: none;
+    transition: background-color 2s;
+}
+
+a:hover{
+    background-color: var(--bg-color3);
+}
+

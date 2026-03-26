@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #00FF00;
+    --bg-color1: #FFFFFF;
+    --text-color: #0000CD;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1;
+    text-align: justify;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+header, main, footer {
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.card {
+    display: flex;
+    width: 25rem;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    background-color: var(--bg-color1);
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 1);
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+}
+
+.img1 img {
+    width: 25rem;
+    height: auto;
+    border-radius: 0.625rem;
+    box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 1);
+}
+
+.video-block {
+    margin-top: 2rem;
+    width: 25rem;
+    height: 18.75rem;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 0.625rem;
+}
+
+.menu a {
+    width: 9.375rem;
+    display: block;
+    padding: 0.313rem 0.625rem;
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 1.875rem;
+    background-color: var(--bg-color1);
+    text-decoration: none;
+    transition: width 2s;
+}
+
+a:hover {
+    width: 12.5rem;
+}
+
+
+
+
+
+
