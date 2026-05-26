@@ -11,20 +11,24 @@
     <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
     <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style3.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Головна</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="catalog.html">Каталог</a></li>
-                <li><a href="contacts.html">Контакти</a></li>
-            </ul>
-        </nav>
+    <header class="top-nav">
+        <div>Головна</div>
+        <input id="menu-toggle" type="checkbox">
+        <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+        </label>
+
+        <ul class="menu">
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+        </ul>
     </header>
     <main>
         <div class="row">
@@ -42,6 +46,7 @@
             <source src="videos/" type="video/mp4">
             Your browser does not support the video tag.
         </video>
+
     </main>
     <footer>2026 ToDoList</footer>
 </body>

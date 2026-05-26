@@ -15,7 +15,9 @@ body {
 }
 
 header, footer {
+    font-size: 1.5rem;
     text-align: center;
+    padding: 1rem;
 }
 
 h2 {
@@ -41,14 +43,14 @@ h2 {
     font-size: 1.3rem;
     width: 9.375rem;
     padding: 0.625rem 1.25rem;
-    color: var(--text-color);
+    color: var(--bg-color2);
     border-radius: 1.875rem;
-    background-color: var(--bg-color);
-    transition: background-color 2s;
+    background-color: var(--bg-color1);
+    transition: width 2s;
 }
 
 a:hover{
-    background-color: var(--bg-color2);
+    width: 12.5rem;
 }
 
 table {
@@ -78,3 +80,44 @@ table tfoot {
     color: var(--text-color);
 }
 
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --bg-color: #121212;
+        --bg-color1: #1E1E1E;
+        --bg-color2: #6495ED;
+        --text-color: #FFFFFF;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    .menu a {
+        background-color: var(--bg-color1);
+        color: var(--text-color);
+    }
+
+    table th,
+    table td {
+        border: 0.0625rem solid #444;
+    }
+
+    table tbody tr:nth-child(even) {
+        background-color: #2A2A2A;
+        color: var(--text-color);
+    }
+
+    table tbody tr:nth-child(odd) {
+        background-color: #1A1A1A;
+        color: var(--text-color);
+    }
+
+    table thead,
+    table tfoot {
+        background-color: var(--bg-color2);
+        color: var(--text-color);
+    }
+
+}

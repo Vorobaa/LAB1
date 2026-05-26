@@ -3,36 +3,44 @@
 }
 
 :root {
-    --bg-color: #FFFFFF;
-    --bg-color1: #D3D3D3;
-    --bg-color2: #00008B;
-    --bg-color3: #0000CD;
+    --background-color: #FFFFFF;
+    --background-color1: #D3D3D3;
+    --background-color2: #00008B;
+    --background-color3: #0000CD;
+
+    --text1-color: #111111;
+    --input-bg: #ffffff;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 p {
     line-height: 0.5;
 }
 
-header, footer {
+header {
+    font-size: 1.5rem;
     text-align: center;
+    padding: 1rem;
 }
 
 input, select {
     border: none;
     outline: none;
     padding: 0.5rem;
-    background-color: var(--bg-color);
+    background-color: var(--input-bg);
+    color: var(--text-color);
     transition: 0.5s ease-out;
 }
 
 input:focus, select:focus {
-    border:  0.125rem solid var(--bg-color2);
-    background-color: var(--bg-color1);
+    border:  0.125rem solid var(--background-color2);
+    background-color: var(--background-color1);
 }
 
 input:focus::placeholder {
@@ -53,8 +61,8 @@ input[type="radio"]:hover {
 }
 
 button {
-    background-color: var(--bg-color2);
-    color: var(--bg-color);
+    background-color: var(--background-color2);
+    color: var(--background-color);
     border: none;
     padding: 0.625rem 1.25rem;
     cursor: pointer;
@@ -65,7 +73,7 @@ button {
 }
 
 button:hover {
-    background-color: var(--bg-color3);
+    background-color: var(--background-color3);
     width: 200px;
 }
 
@@ -88,13 +96,27 @@ button:hover {
     font-size: 1.3rem;
     width: 9.375rem;
     padding: 0.625rem 1.25rem;
-    color: var(--bg-color);
+    color: var(--background-color2);
     border-radius: 1.875rem;
-    background-color: var(--bg-color2);
-    transition: background-color 2s;
+    background-color: var(--background-color);
+    transition: width 2s;
 }
 
 a:hover{
-    background-color: var(--bg-color3);
+    width: 12.5rem;
 }
 
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-color: #0f172a;
+        --background-color1: #1e293b;
+        --background-color2: #e2e8f0;
+        --background-color3: #3b82f6;
+        --text-color1: #e2e8f0;
+        --input-bg: #1e293b;
+    }
+
+    body {
+        background-color: var(--background-color);
+    }
+}

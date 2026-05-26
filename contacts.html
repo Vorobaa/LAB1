@@ -11,21 +11,24 @@
     <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
     <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
     <link rel="stylesheet" href="contacts.css">
+    <link rel="stylesheet" href="style3.css">
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-       <h1>Контакти</h1>
-        <nav>
-            <ul class="menu">
-                <li><a href="index.html">Головна</a></li>
-                <li><a href="catalog.html">Каталог</a></li>
-            </ul>
-        </nav>
-        <h2>Форма зворотного зв'язку</h2>
+    <header class="top-nav">
+       <div>Контакти</div>
+        <input id="menu-toggle" type="checkbox">
+        <label class="menu-button-container" for="menu-toggle">
+            <div class="menu-button"></div>
+        </label>
+        <ul class="menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+        </ul>
     </header>
     <main>
         <div>
