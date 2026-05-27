@@ -10,44 +10,51 @@
     <meta property="og:title" content="ToDoList">
     <meta property="og:description" content="Простий сайт ToDoList для керування завданнями. Додавайте, редагуйте та слідкуйте за своїми завданнями.">
     <meta property="og:image" content="https://blog.lulu.com/content/images/2024/12/072120-ToDoList-Blog.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style3.css">
-
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <link rel="stylesheet" href="style3.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <header class="top-nav">
-        <div>Головна</div>
-        <input id="menu-toggle" type="checkbox">
-        <label class="menu-button-container" for="menu-toggle">
-            <div class="menu-button"></div>
-        </label>
-
-        <ul class="menu">
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="contacts.html">Контакти</a></li>
-        </ul>
-    </header>
-    <main>
-        <div class="row">
-            <div class="card">
-                <h2>Ласкаво просимо!</h2>
-                <p>Це простий сайт для керування списком завдань.</p>
-            </div>
-            <picture class="img1">
-                <source media="(min-width: 400px)" srcset="images/todolist.jpg">
-                <source media="(min-width: 250px)" srcset="images/todolist_small.jpg">
-                <img src="images/todolist.jpg" alt="ToDoList">
-            </picture>
+<body class="font-[Roboto] bg-gray-100 min-h-screen grid grid-rows-[auto_1fr_auto]">
+    <header class="bg-blue-700 text-white">
+        <div class="flex justify-between items-center p-4">
+            <div class="text-2xl font-bold">Каталог</div>
+            <input id="menu-toggle" type="checkbox" class="hidden peer">
+            <label for="menu-toggle" class="md:hidden flex flex-col gap-1 cursor-pointer">
+                <span class="block w-8 h-1 bg-white"></span>
+                <span class="block w-8 h-1 bg-white"></span>
+                <span class="block w-8 h-1 bg-white"></span>
+            </label>
+            <nav class="hidden peer-checked:block md:flex md:gap-8 absolute md:static top-16 left-0 w-full md:w-auto bg-blue-700 md:bg-transparent">
+                <ul class="flex flex-col md:flex-row w-full md:w-auto">
+                    <li class="border-b md:border-0"><a href="catalog.html" class="block p-4 hover:bg-blue-600 text-xl">Каталог</a></li>
+                    <li><a href="contacts.html" class="block p-4 hover:bg-blue-600 text-xl">Контакти</a></li>
+                </ul>
+            </nav>
         </div>
-        <video class="video-block" controls>
-            <source src="videos/" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+    </header>
+    <main class="min-h-screen flex items-center justify-center">
+        <div class="container mx-auto p-6">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="bg-[#6495ED] rounded-2xl shadow-lg p-6 space-y-7 hover:shadow-2xl transition h-[700px]">
+                    <h2 class="text-3xl font-bold mb-4"> Ласкаво просимо! </h2>
+                    <p class="text-gray-700"> Це простий сайт для керування списком завдань.</p>
+                    <video class="w-full h-[550px] object-cover rounded-2xl shadow-lg" controls>
+                        <source src="videos/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <picture>
+                    <source media="(min-width: 400px)" srcset="images/todolist.jpg">
+                    <source media="(min-width: 250px)" srcset="images/todolist_small.jpg">
 
+                    <img src="images/todolist.jpg" alt="ToDoList" class="rounded-2xl shadow-lg w-full h-[700px]">
+                </picture>
+            </div>
+        </div>
     </main>
-    <footer>2026 ToDoList</footer>
+    <footer class="bg-blue-700 text-white text-center p-4">2026 ToDoList</footer>
 </body>
 </html>
