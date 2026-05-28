@@ -17,6 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+    <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="font-[Roboto] bg-gray-100 min-h-screen grid grid-rows-[auto_1fr_auto]">
@@ -40,48 +41,60 @@
     <main class="p-6 space-y-1">
         <div class="container mx-auto p-10">
             <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Список завдань</h2>
+
+            <input id="search-task" type="text" placeholder="Пошук задачі" class="border border-gray-300 p-2 rounded-md shadow-sm w-full md:w-1/2 focus:ring-2 focus:ring-blue-500">
+
+            <div class="mb-4 flex justify-end items-center gap-3">
+                <label class="text-gray-700 font-medium">Категорія:</label>
+                <select id="category-filter" class="border border-gray-300 p-2 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500">
+                    <option value="all">Всі категорії</option>
+                </select>
+            </div>
+
+            <div id="deadline-output" class="mb-4 text-blue-700 font-semibold"></div>
+
             <div class="overflow-x-auto bg-white rounded-2xl shadow-lg">
                 <table class="min-w-full text-sm text-left">
                     <thead class="bg-blue-600 text-white">
                         <tr>
                             <th class="p-4">№</th>
                             <th class="p-4">Назва завдання</th>
-                            <th class="p-4">Дата початку</th>
-                            <th class="p-4">Дата завершення</th>
+                            <th class="p-4">Категорія</th>
+                            <th class="p-4">Пріоритет</th>
+                            <th class="p-4">Дедлайн</th>
                             <th class="p-4">Статус</th>
+                            <th class="p-4">Інше</th>
                         </tr>
                     </thead>
-                    <tbody class="text-gray-700">
 
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="p-4">1</td>
-                            <td class="p-4">Вивчити HTML</td>
-                            <td class="p-4">01.03.2026</td>
-                            <td class="p-4">05.03.2026</td>
-                            <td class="p-4 text-yellow-600 font-semibold">В процесі</td>
-                        </tr>
+                    <tbody id="tasks-table" class="text-gray-700">
+<!--                        <tr class="border-b hover:bg-gray-50">-->
+<!--                            <td class="p-4">1</td>-->
+<!--                            <td class="p-4">Вивчити HTML</td>-->
+<!--                            <td class="p-4">01.03.2026</td>-->
+<!--                            <td class="p-4">05.03.2026</td>-->
+<!--                            <td class="p-4 text-yellow-600 font-semibold">В процесі</td>-->
+<!--                        </tr>-->
 
-                        <tr class="border-b hover:bg-gray-50">
-                            <td class="p-4">2</td>
-                            <td class="p-4">Зробити домашнє</td>
-                            <td class="p-4">02.03.2026</td>
-                            <td class="p-4">04.03.2026</td>
-                            <td class="p-4 text-red-600 font-semibold">Не виконано</td>
-                        </tr>
+<!--                        <tr class="border-b hover:bg-gray-50">-->
+<!--                            <td class="p-4">2</td>-->
+<!--                            <td class="p-4">Зробити домашнє</td>-->
+<!--                            <td class="p-4">02.03.2026</td>-->
+<!--                            <td class="p-4">04.03.2026</td>-->
+<!--                            <td class="p-4 text-red-600 font-semibold">Не виконано</td>-->
+<!--                        </tr>-->
 
-                        <tr class="hover:bg-gray-50">
-                            <td class="p-4">3</td>
-                            <td class="p-4">Створити сайт</td>
-                            <td class="p-4">05.03.2026</td>
-                            <td class="p-4">10.03.2026</td>
-                            <td class="p-4 text-green-600 font-semibold">Виконано</td>
-                        </tr>
+<!--                        <tr class="hover:bg-gray-50">-->
+<!--                            <td class="p-4">3</td>-->
+<!--                            <td class="p-4">Створити сайт</td>-->
+<!--                            <td class="p-4">05.03.2026</td>-->
+<!--                            <td class="p-4">10.03.2026</td>-->
+<!--                            <td class="p-4 text-green-600 font-semibold">Виконано</td>-->
+<!--                        </tr>-->
                     </tbody>
                     <tfoot class="bg-gray-100 font-semibold">
                         <tr>
-                            <td colspan="5" class="p-4 text-center">
-                                Усього завдань: 3
-                            </td>
+                            <td colspan="5" class="p-4 text-center" id="total-tasks"></td>
                         </tr>
                     </tfoot>
                 </table>
