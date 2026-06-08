@@ -18,6 +18,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
     <script src="form.js" defer></script>
+    <script src="TaskManager.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body class="font-[Roboto] bg-gray-100 min-h-screen grid grid-rows-[auto_1fr_auto]">
@@ -110,20 +111,20 @@
                 <div>
                     <p class="font-semibold mb-2">Пріоритет</p>
 
-                    <label class="flex items-center gap-2"><input type="radio" name="priority">Високий</label>
+                    <label class="flex items-center gap-2"><input type="radio" name="priority" value="Високий" required>Високий</label>
 
-                    <label class="flex items-center gap-2"><input type="radio" name="priority">Середній</label>
+                    <label class="flex items-center gap-2"><input type="radio" name="priority" value="Середній">Середній</label>
 
-                    <label class="flex items-center gap-2"><input type="radio" name="priority">Низький</label>
+                    <label class="flex items-center gap-2"><input type="radio" name="priority" value="Низький">Низький</label>
                 </div>
                 <div>
                     <p class="font-semibold mb-2">Теги</p>
 
-                    <label class="flex items-center gap-2"><input type="checkbox">Робота</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" value="Робота">Робота</label>
 
-                    <label class="flex items-center gap-2"><input type="checkbox">Домашнє</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" value="Домашнє">Домашнє</label>
 
-                    <label class="flex items-center gap-2"><input type="checkbox">Термінове</label>
+                    <label class="flex items-center gap-2"><input type="checkbox" value="Термінове">Термінове</label>
                 </div>
 
                 <label for="category" class="block font-semibold mb-2">Категорія</label>
@@ -137,6 +138,10 @@
             </fieldset>
             <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition">Відправити</button>
         </form>
+
+        <div id="task-list" class="w-full max-w-2xl"></div>
+        <div id="task-stats" class="w-full max-w-2xl text-center text-lg font-bold mb-2"></div>
+
     </main>
     <footer class="bg-blue-700 text-white text-center p-4">2026 ToDoList</footer>
 </body>
